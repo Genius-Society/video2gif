@@ -1,39 +1,7 @@
-# video2gif
+# video2gif WebUI
+[![license](https://img.shields.io/github/license/Genius-Society/video2gif.svg)](./LICENSE)
+[![auto-sync](https://github.com/Genius-Society/video2gif/actions/workflows/auto-sync.yml/badge.svg)](https://github.com/Genius-Society/video2gif/actions/workflows/auto-sync.yml)
+[![hf](https://img.shields.io/badge/huggingface-video2gif-ffd21e.svg)](https://huggingface.co/spaces/Genius-Society/video2gif)
+[![ms](https://img.shields.io/badge/modelscope-video2gif-624aff.svg)](https://www.modelscope.cn/studios/Genius-Society/video2gif)
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+这款短视频转动图工具让创作变得无比轻松——只需三步操作，即可将任何短视频片段（如抖音、快手、B站视频）一键转换为高清流畅的GIF动图，支持精准截取时间轴、自定义分辨率与帧率优化，并添加文字贴纸特效，无论是制作表情包、教程演示还是社交媒体热图，无需专业技能，30秒极速输出专业级动态画面，让精彩瞬间在聊天窗口和朋友圈生动传播！
