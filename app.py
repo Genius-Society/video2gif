@@ -101,4 +101,4 @@ if __name__ == "__main__":
         examples=[[f"{example}/examples/herta.mp4", 2]],
         cache_examples=False,
         title=_L("视频转 GIF 动图"),
-    ).launch(css="#gradio-share-link-button-0 { display: none; }")
+    ).launch(css="#gradio-share-link-button-0 { display: none; }", ssr_mode=False)
