@@ -1,10 +1,12 @@
 import os
 import math
+import shutil
 import gradio as gr
 from PIL import Image, ImageSequence
 from moviepy.editor import VideoFileClip
-from utils import clean_dir, TMP_DIR, EN_US
 
+EN_US = os.getenv("LANG") != "zh_CN.UTF-8"
+TMP_DIR = os.path.join(os.path.dirname(__file__), "__pycache__")
 ZH2EN = {
     "倍速": "Speed",
     "状态栏": "Status",
@@ -48,8 +50,15 @@ def resize_gif(target_width: int, target_height: int, input_gif, output_gif):
     return output_gif
 
 
+def clean_dir(dir_path: str):
+    if os.path.exists(dir_path):
+        shutil.rmtree(dir_path)
+
+    os.makedirs(dir_path)
+
+
 # outer func
-def infer(video_path: str, speed: float, target_w=640, cache=f"{TMP_DIR}/gif"):
+def infer(video_path: str, speed: float, target_w=640, cache=TMP_DIR):
     status = "Success"
     gif_name = gif_out = None
     try:
@@ -72,13 +81,13 @@ def infer(video_path: str, speed: float, target_w=640, cache=f"{TMP_DIR}/gif"):
     return status, gif_name, gif_out
 
 
-if __name__ == "__main__":
+def main():
     example = (
         "https://www.modelscope.cn/studio/Genius-Society/video2gif/resolve/master"
         if EN_US
         else "."
     )
-    gr.Interface(
+    return gr.Interface(
         fn=infer,
         inputs=[
             gr.Video(
@@ -101,4 +110,8 @@ if __name__ == "__main__":
         examples=[[f"{example}/examples/herta.mp4", 2]],
         cache_examples=False,
         title=_L("视频转 GIF 动图"),
-    ).launch(css="#gradio-share-link-button-0 { display: none; }", ssr_mode=False)
+    )
+
+
+if __name__ == "__main__":
+    main().launch(css="#gradio-share-link-button-0 { display: none; }", ssr_mode=False)
